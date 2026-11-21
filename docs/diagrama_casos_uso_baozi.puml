@@ -1,0 +1,75 @@
+@startuml diagrama_casos_uso_baozi
+' Diagrama dos 12 casos de uso obrigatórios implementados na API REST.
+' Renderizado com PlantUML 1.2026.10 com o mecanismo Smetana.
+!pragma layout smetana
+left to right direction
+skinparam backgroundColor white
+skinparam packageStyle rectangle
+skinparam shadowing false
+skinparam defaultFontName Arial
+skinparam defaultFontSize 18
+skinparam dpi 180
+skinparam nodesep 4
+skinparam ranksep 25
+skinparam Padding 0
+skinparam ArrowColor #323232
+skinparam ArrowThickness 1.2
+skinparam actorBorderColor #222222
+skinparam actorFontColor #111111
+skinparam usecase {
+    BackgroundColor white
+    BorderColor #222222
+    FontColor #111111
+    BorderThickness 1.2
+}
+skinparam rectangle {
+    FontSize 17
+    BackgroundColor white
+    BorderColor #222222
+    FontColor #111111
+    BorderThickness 1.2
+}
+skinparam package {
+    FontSize 15
+    BackgroundColor white
+    BorderColor #777777
+    FontColor #111111
+    BorderThickness 0.8
+}
+
+actor "Usuário da API" as Usuario
+
+rectangle "API REST Baozi Store" as Sistema {
+    package "Cliente" as Clientes {
+        usecase "Cadastrar cliente" as CC
+        usecase "Listar clientes" as LC
+        usecase "Consultar cliente por ID" as BC
+        usecase "Excluir cliente" as EC
+    }
+    package "Produto" as Produtos {
+        usecase "Cadastrar produto" as CP
+        usecase "Listar produtos" as LP
+        usecase "Consultar produto por ID" as BP
+        usecase "Excluir produto" as EP
+    }
+    package "Pedido" as Pedidos {
+        usecase "Registrar pedido" as CR
+        usecase "Listar pedidos" as LR
+        usecase "Consultar pedido por ID" as BR
+        usecase "Excluir pedido" as ER
+    }
+}
+
+Usuario --> CC
+Usuario --> LC
+Usuario --> BC
+Usuario --> EC
+Usuario --> CP
+Usuario --> LP
+Usuario --> BP
+Usuario --> EP
+Usuario --> CR
+Usuario --> LR
+Usuario --> BR
+Usuario --> ER
+@enduml
