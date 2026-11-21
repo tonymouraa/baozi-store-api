@@ -1,6 +1,6 @@
 # Baozi Store API
 
-Atividade prática de Desenvolvimento Web Back-End de **Tony Moura Barbosa**, **RU 5230010**.
+Atividade prática de Desenvolvimento Web Back-End de **Tony Moura**.
 
 API REST para cadastrar clientes e produtos e registrar pedidos de um único produto. O cenário de demonstração utiliza o cliente **Tony5230010**, o produto **BaoEspecial**, preço fictício de **R$ 8,50**, e um pedido de **25 unidades**. O campo `estoque` indica disponibilidade (`true` ou `false`); ele não representa uma quantidade de unidades.
 
